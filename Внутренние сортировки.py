@@ -137,7 +137,7 @@ if __name__=='__main__':
     n=5000
     print('Количество элементов: ', n)
     for i in range(n):
-        a.append(randint(1,10000))
+        a.append(randint(1,100000))
     #print('Массив отсортирован? ',check(a))
     print('Рандомный набор элементов.')
     print('Пузырьковая сортировка: ',BubbleSort(a))
