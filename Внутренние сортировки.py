@@ -7,6 +7,7 @@ def check(ch):
         if ch[i-1]>ch[i]:
             return "No"
     return "Yes"
+
 #Пузырьковая сортировка
 def BubbleSort(a1):
     t=time()
@@ -21,6 +22,7 @@ def BubbleSort(a1):
                 wasswap=True
         R=R-1
     return time()-t
+
 #Шейкерная сортировка
 def CocktailSort(b1):
     t=time()
@@ -36,6 +38,7 @@ def CocktailSort(b1):
                 b[i],b[i-1]=b[i-1],b[i]
         left+=1
     return   time()-t
+
 #Сортировка Шелла
 def ShellSort(c1):
     t=time()
@@ -47,6 +50,7 @@ def ShellSort(c1):
                 c[i],c[i+d]=c[i+d],c[i]
         d-=1
     return  time()-t
+
 #Сортировка выбором
 def SelectionSort(d1):
     t=time()
@@ -59,6 +63,7 @@ def SelectionSort(d1):
                 minR=d[j]; k=j
         d[k]=d[i]; d[i]=minR
     return time()-t
+
 #Сортировка простыми вставками
 def InsertionSort(f1):
     t=time()
@@ -70,6 +75,7 @@ def InsertionSort(f1):
             f[j+1]=f[j]; j-=1
         f[j+1]=r
     return time()-t
+
 #Моя сортировка
 def MySort(e1):
     t=time()
@@ -79,6 +85,7 @@ def MySort(e1):
             if e[i]<e[j]:
                 e[i],e[j]=e[j],e[i]
     return  time()-t
+
 #Быстрая сортировка
 def QuickSort(g,b,e): #массив,индекс первого и последнего элемента
     #w=g[(b+e)//2]
@@ -96,6 +103,7 @@ def QuickSort(g,b,e): #массив,индекс первого и послед�
         QuickSort(g,b,r)
     if l<e:
         QuickSort(g,l,e)
+
 # Сортировка подсчетом
 def BadSort(j1):
     t=time()
@@ -108,6 +116,7 @@ def BadSort(j1):
         for d in range(c[i]):
             b.append(i)
     return time()-t
+
 #Бинарный поиск (для сортировки Бинарными вставками)
 def BinarySearch(a,left,right,key):
     #left=0;right=len(a)-1; 
@@ -121,6 +130,7 @@ def BinarySearch(a,left,right,key):
             return w
         if left>right:
             return left
+
 #Сортировка Бинарными вставками
 def B(o1):
     t=time()
@@ -132,6 +142,7 @@ def B(o1):
         for m in range(j,k-1,-1): #m = j downto k
             o[m], o[m+1] = o[m+1],o[m]
     return time()-t
+
 if __name__=='__main__':
     a=[]
     n=5000
